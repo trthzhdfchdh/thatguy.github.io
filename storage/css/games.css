@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Main';
+    src: url('../fonts/ubuntu/Ubuntu.woff2') format('woff2'),
+         url('../fonts/ubuntu/Ubuntu.woff') format('woff'),
+         url('../fonts/ubuntu/Ubuntu.ttf') format('ttf'),
+         url('../fonts/ubuntu/Ubuntu.otf') format('otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Main', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    background-image: url('../../images/seraphgamesbackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: mainHeaderAnimation 0.75s ease-in-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+    color: white;
+    cursor: none;
+
+}
+
+h1, h2 {
+    font-family: 'Main', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    border: 3px solid white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+
+    width: calc(50% - 10px); 
+    max-width: 480px;
+
+    width: 480px;
+    max-height: 100px;
+    box-sizing: border-box;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    border: 3.2px solid rgb(109, 107, 107);
+    border-radius: 16px;
+
+    transition: border 0.04s ease-in;
+    cursor: none;
+}
+
+.button:hover {
+    background-color: #252323;
+    border: 3.2px solid rgb(255,255,255)
+}
+
+.button h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes mainHeaderAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: none;
+}
+
+.cursor {
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 10000;
+    transition: transform 1s ease;
+}

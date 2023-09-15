@@ -1,0 +1,74 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/ico.ico" type="image/x-icon">
+        <title>Update Log | Seraph</title>
+        <link rel="stylesheet" href="storage/css/update.css">
+  </head>
+  <body>
+      <div class="cursor"></div>
+      <div class="content-side">
+        <h1 class="typewriter"><span id="cursor"></span></h1>
+        <h3 style="text-align: center;">version 3</h3>
+        <div id="center">
+            <a href="index.html" style="text-decoration: underline; color: white; text-align: center;">Go to homepage</a>
+            <a href="https://github.com/a456pur/seraph" target="_blank" style="text-decoration: underline; color: white; text-align: center;">View GitHub</a>
+        </div>
+        
+        <br>
+        <ul>
+            <li>Added sixteen brand new games</li>
+            <ul>
+                <li>FNAF: Five Nights at Freddy's 1, Five Nights at Freddy's 2, Five Nights at Freddy's 3, Five Nights at Freddy's 4</li>
+                <li>Riddle School: Riddle School, Riddle School 2, Riddle School 3, Riddle School 4, Riddle School 5, Riddle Transfer, Riddle Transfer 2</li>
+                <li>Drift Boss, Friday Night Funkin, Papa's Pancakeria, Pacman, Rooftop Snipers</li>
+            </ul>
+            <br>
+
+            <li>Updated games page</li>
+            <ul>
+                <li>Added a custom cursor</li>
+                <li>Resized buttons to be semi-responsive</li>
+                <li>Games now open in a new tab</li>
+                <li>Border effect removed for more optimisation</li>
+                <li>Changed font to match more with the website</li>
+            </ul>
+            <br>
+
+            <li>Added custom cursor around the whole website</li>
+            <li>Changed homepage styling to be more accessible</li>
+            <li>Fixed resizing issues related to update log page</li>
+            <li>Fonts no longer rely on Google Fonts and are stored locally</li>
+            <li>Attempted to fix tanking Happy Wheels performance</li>
+            <li>Major GitHub README overhaul</li>
+        </ul>
+      </div>
+
+
+      <script>
+        const text = "update log";
+        const typingDelay = 400; 
+        const initialDelay = 30; 
+        const cursor = document.getElementById("cursor");
+        const h1 = document.querySelector(".typewriter");
+
+        function type() {
+        setTimeout(() => {
+            for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+                h1.textContent += text[i];
+                if (i === text.length - 1) {
+                cursor.style.display = "none"; 
+                }
+            }, i * typingDelay);
+            }
+        }, initialDelay);
+        }
+
+        type();
+      </script>
+
+<script src="storage/js/cursor.js"></script>
+  </body>
+</html>
